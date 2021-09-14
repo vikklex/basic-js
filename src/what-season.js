@@ -21,7 +21,6 @@ export default function getSeason(date) {
   }
   else if (date) {
     const month = date.getMonth() + 1;
-
     if (month === 12 || month === 1 || month === 2) {
       return "winter";
     } else if (month >= 3 && month < 6) {

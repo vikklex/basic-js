@@ -12,17 +12,15 @@ import { NotImplementedError } from '../extensions/index.js';
  * depthCalc.calculateDepth( [ [ [] ] ] ) => 3
  *
  */
-export default class DepthCalculator {
+ export default class DepthCalculator {
   calculateDepth(arr) {
     let count = 1;
     for (let i = 0; i < arr.length; i++) {
-      if (Array.isArray[arr[i]]) {
+      if (Array.isArray(arr[i])) {
         count += this.calculateDepth(arr.flat());
         break;
       }
     }
-    return count
+    return count;
   }
 }
-
-
